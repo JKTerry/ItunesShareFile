@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="遍历Documents目录下所有文件，输出文件全路径到控制台" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rcg-1P-riL">
+                                <rect key="frame" x="78" y="37" width="445" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="创建一个视频文件并写入Documents目录下,完成App向iTunes导出文件" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x69-iC-Nxq">
+                                <rect key="frame" x="48" y="120" width="530" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="Ynb-IE-n9F"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="64h-3V-0m5">
+                                <rect key="frame" x="134" y="157" width="124" height="30"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="18"/>
+                                <size key="titleShadowOffset" width="13" height="11"/>
+                                <state key="normal" title="写文件到iTunes">
+                                    <color key="titleColor" red="0.26927915460000001" green="0.59710263620000004" blue="0.62411221589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="writeFileToItunes:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PGx-W4-rTJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTa-Is-EaK">
+                                <rect key="frame" x="134" y="73" width="90" height="30"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="18"/>
+                                <size key="titleShadowOffset" width="13" height="11"/>
+                                <state key="normal" title="读文件路径">
+                                    <color key="titleColor" red="0.26927915461716595" green="0.59710263619797233" blue="0.62411221590909083" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="readFilePath:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HXl-Kl-BUS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="x69-iC-Nxq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="32" id="00v-tM-Ufg"/>
+                            <constraint firstItem="fTa-Is-EaK" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="73" id="1MQ-QC-W2M"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="x69-iC-Nxq" secondAttribute="trailing" constant="6" id="N5V-NT-jtN"/>
+                            <constraint firstAttribute="trailing" secondItem="Rcg-1P-riL" secondAttribute="trailing" constant="77" id="Vg4-yz-Y7Y"/>
+                            <constraint firstItem="Rcg-1P-riL" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="37" id="d7U-cs-eHS"/>
+                            <constraint firstItem="fTa-Is-EaK" firstAttribute="top" secondItem="Rcg-1P-riL" secondAttribute="bottom" constant="15" id="fGr-1M-9Xg"/>
+                            <constraint firstItem="fTa-Is-EaK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="134" id="kyf-C0-Mrt"/>
+                            <constraint firstItem="Rcg-1P-riL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="78" id="qUE-UN-Ktf"/>
+                            <constraint firstItem="x69-iC-Nxq" firstAttribute="top" secondItem="fTa-Is-EaK" secondAttribute="bottom" constant="17" id="seA-qn-8eF"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
